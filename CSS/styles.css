@@ -15,6 +15,8 @@ div span {
 }
 * {
   background-color: beige;
+  margin: 0;
+  padding: 0;
 }
 
 a:hover {
@@ -31,4 +33,22 @@ a:link {
 }
 div:first-child{
     color:rgb(209, 10, 10)
+}
+.box{
+  background-color: aqua;
+}
+.box1{
+  color:blue;
+  padding: 20px;
+  margin:30px;
+  border: 5px solid blue;
+  height: 200px;
+}
+.box2{
+  color:rgb(107, 36, 214);
+  padding: 20px;
+  margin:30px;
+  border: 5px solid rgb(10, 205, 82);
+  height: 200px;
+  box-sizing: border-box;
 }

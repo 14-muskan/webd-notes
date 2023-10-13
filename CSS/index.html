@@ -75,5 +75,11 @@
         I am second child div of main tag
       </div>
     </main>
+    <h2>CSS- Box Model</h2>
+    <div class="box box1">I am box. With padding = 20 px which is applied within the element and margin = 30px which is applied outside of the element. The border is applied on the element which includes the padding but not the margin. So the shaded blue area has the div along with the padding until the border. After that, margin starts.</div>
+    <div class="box box2">I am another box. Height of the box is 200px. But the total height covered by this div will be 200px + 2*margin + 2*border + 2*padding, similarly for width.
+      But if we also add box-sizzing property as bprder box, then it will keep the total width excluding the margin as 200px.
+    </div>
+    <p>Here the concept of margin collapse is also working which states that if the margin of two elements are overlapping, then the largest of them would be applied only.</p>
   </body>
 </html>
