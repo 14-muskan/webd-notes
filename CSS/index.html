@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS- Notes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>CSS NOTES - styled using ELEMENT selector</h1>
+    <div>
+      Ways to add CSS in HTML
+      <ul>
+        <li>
+          <b>Inline CSS</b> - using style as an attribute for an HTML tag, not
+          considered as a good practice.
+        </li>
+        <li>
+          <b>Internal CSS</b> - using style as tag nested under head tag, useful
+          for small webpages
+        </li>
+        <li>
+          <b>External CSS</b> - using a .css file and linking it with .html,
+          considered as most important
+        </li>
+      </ul>
+    </div>
+
+    <h2>CSS selectors</h2>
+    <div class="red">I am div styled using CLASS selector</div>
+    <div id="yellow">I am a div styled using ID selector</div>
+    <div>
+      <p>
+        I am a paragraph within a div. And i am direct child of div. So i can be
+        styled using CHILD selector as 'div > p'
+      </p>
+    </div>
+
+    <div>
+      <article>
+        <p>
+          I am a paragraph within a article tag that is nested under div. And i
+          am NOT direct child of div. So i CANNOT be styled using CHILD selector
+          as 'div > p'.
+        </p>
+      </article>
+    </div>
+
+    <div>
+      <article>
+        <span
+          >I am a paragraph within a article tag that is nested under div. And i
+          am NOT direct child of div. So i CAN be styled using DESCENDANT
+          selector as 'div p'.</span
+        >
+      </article>
+    </div>
+
+    <h3>Now another category of selectors - pseudo selectors</h3>
+    <ul>
+      <li>a:hover - to style the hover state</li>
+      <li>a:visited - to style the visited link</li>
+      <li>a:active - to style the active link</li>
+      <li>a:link - to style the link</li>
+      <li>p:link - to style the p tag wherever it is the first child of any parent tag</li>
+    </ul>
+    <a href="https://www.google1.com">Go to Google(Not Visited)</a>
+    <a href="https://www.youtube.com">Go to Youtube(Visited)</a>
+    <a href="https://www.youtube2.com">Go to Youtube Secondary(Not Visited)</a>
+    <main>
+      <div>
+        I am first child div of main tag
+      </div>
+      <div>
+        I am second child div of main tag
+      </div>
+    </main>
+  </body>
+</html>

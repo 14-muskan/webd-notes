@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page conatins my notes on Sigma WebD course by Harry"
+    />
+    <title>My Notes for CWH Sigma course</title>
+  </head>
+  <body>
+    <h1>My Bookmarks</h1>
+    <a href="https://youtube.com">Open Youtube</a>
+    <p style="background-color: thistle">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, aspernatur!
+    </p>
+    <img height="500" src="img1.jpg" alt="Leaves" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus deserunt
+      soluta exercitationem iure. Doloremque perspiciatis ad alias facilis vel?
+      Nobis?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, ut.</p>
+    <a href="https://google.com">Open Google</a>
+
+    <table>
+      <caption>
+        All bookmarks
+      </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google</td>
+          <td><a href="https://google.com">Open Google</a></td>
+        </tr>
+        <tr>
+          <td>Youtube</td>
+          <td><a href="https://youtube.com">Open Youtube</a></td>
+        </tr>
+        <tr>
+          <td>Gmail</td>
+          <td><a href="https://gmail.com">Open Gmail</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>Harry</li>
+      <li>Rohan</li>
+      <li>Shubham</li>
+    </ul>
+    <ol>
+      <li>Harry</li>
+      <li>Rohan</li>
+      <li>Shubham</li>
+    </ol>
+    <ul type="square">
+      <li>Harry</li>
+      <li>Rohan</li>
+      <li>Shubham</li>
+    </ul>
+    <ol type="A">
+      <li>Harry</li>
+      <li>Rohan</li>
+      <li>Shubham</li>
+    </ol>
+    <h1>Core web vitals</h1>
+
+    <dl>
+      <dt>CLS (CUMULATIVE LAYOUT SHIFT)</dt>
+      <dd>
+        measure of how much does the layout shift when the page loads, if we set
+        the height or width of the imgs in html, it will not shift, hence
+        desirable
+      </dd>
+      <br />
+
+      <dt>LCP (LARGEST CONTENTFUL PAINT)</dt>
+      <dd>
+        Gives the time of the render of the largest element in the layout,
+        ideally should be less than equal to 2.5 seconds
+      </dd>
+      <br />
+
+      <dt>FID (FIRST INPUT DELAY)</dt>
+      <dd>The user input should start processing within 100 miliseconds</dd>
+    </dl>
+
+    <p>
+      Generate a lighthouse report to analyze the performance of the webpage.
+    </p>
+    <p>
+      To learn more about SEO and Core web vitals, visit
+      <a href="https://web.dev"> Web.dev </a>
+    </p>
+
+    <h2 style="color: red">Essential Notes</h2>
+
+    <ul>
+      <li>we don't wish to bloat out html page with br tags so we use divs</li>
+      <li>
+        <a href="https://google.com" style="background-color: rgb(219, 165, 83)"
+          >Inline element take up only the necessary width
+        </a>
+      </li>
+      <li>
+        <p style="background-color: rgb(88, 204, 204)">
+          Block Element take up the whole width
+        </p>
+      </li>
+      <li>These elements can be changed by applying suitable css</li>
+      <li>
+        Html removes spaces if more than one occurs simultaneously. To add a
+        white space, we use <code>&amp;nbsp;</code>
+      </li>
+    </ul>
+
+    <table>
+      <thead>
+        <tr>
+          <td>Block</td>
+          <td>Inline</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>div</td>
+          <td>span</td>
+        </tr>
+        <tr>
+          <td>p</td>
+          <td>a</td>
+        </tr>
+        <tr>
+          <td>section</td>
+          <td>img</td>
+        </tr>
+        <tr>
+          <td>header</td>
+          <td>video</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h1>Form to apply for the course</h1>
+
+    <form action="post">
+      <div>
+        <label for="username">Enter your username: </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          required
+        />
+      </div>
+      <div>
+        <label for="male">Male </label>
+        <input type="radio" id="male" name="gender" />
+        <label for="female">Female </label>
+        <input type="radio" id="female" name="gender" />
+      </div>
+      <div>
+        <input type="checkbox" id="subscribe" value="'yes" />
+        <label for="subscribe">Subscribe to the newsletter</label>
+      </div>
+      <div>
+        <label for="comment">Enter your comment</label>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+      </div>
+      <div>
+        <select name="fruits">
+          <option value="Apple">Apple</option>
+          <option value="Mango">Mango</option>
+          <option value="Orange">Orange</option>
+          <option value="Banana">Banana</option>
+        </select>
+      </div>
+    </form>
+    <h2 style="color: blueviolet">Quick Quiz</h2>
+    <p>Write a form that asks for the name city and pincode from the user</p>
+    <form action="post">
+      <div>
+        <label for="username">Enter your username: </label>
+        <input type="text" id="username" name="username" required autofocus />
+      </div>
+      <div>
+        <label for="city">Enter your city: </label>
+        <input type="text" id="city" name="city" required />
+      </div>
+      <div>
+        <label for="pincode">Enter your pincode: </label>
+        <input type="text" id="pincode" name="pincode" required />
+      </div>
+    </form>
+
+    <h2>ID vs CLASSES</h2>
+    <p class="definition" id="ids">
+      Ids are unique, cannot be assigned to multiple elements, one element
+      cannot have multiple ids, helps in linking, tageted in css using #
+    </p>
+
+    <p class="definition" id="classes">
+      Classes are not unique, can be assigned to multiple elements, one element
+      can have multiple classes, targetted in css using .
+    </p>
+
+    <video
+      src="video1.mp4"
+      height="250"
+      controls
+      loop
+      muted
+      poster="img1.jpg"
+    ></video>
+    <p>
+      We have a video tag that adds a video to the html pagae. Similar to the
+      video we have an audio tag as well with almost similar attributes like
+      loop, autoplay, controls
+    </p>
+    <svg height="100" width="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="black"
+        stroke-width="4"
+        fill="red"
+      ></circle>
+    </svg>
+    <svg width="400" height="100">
+      <rect
+        width="400"
+        height="100"
+        style="fill: rgb(0, 0, 255); stroke-width: 10; stroke: rgb(0, 0, 0)"
+      />
+    </svg>
+    <p>we can use svg images to define custom shapes</p>
+    <p>
+      we can also embed any websites into ours if we want using
+      <code>iframe tag</code>
+    </p>
+    <iframe
+      src="https://www.w3schools.com/html/html5_svg.asp"
+      width="322"
+      height="444"
+    >
+    </iframe>
+
+    <h2>Semantic Tags</h2>
+    <img src="img2.png" height="500" alt="Semantic Tags" />
+    <p>
+      they enhance SEO rankings of the webpages, they are introduced from HTML5
+      to help parse the content
+    </p>
+    <p>
+      To write the tags as it is on the html page, we make use of
+      <b>HTML Entities</b>.
+    </p>
+    <ul>
+      <li>&lt; &nbsp;&nbsp;denoted as <b>'&amp lt;'</b></li>
+      <li>&gt; &nbsp;&nbsp;denoted as <b>'&amp gt;'</b></li>
+      <li>&copy;&nbsp;&nbsp; denoted as <b>'&amp copy'</b></li>
+      <li>and so on.....</li>
+    </ul>
+    <pre>
+Hello       hi am Sigma WebD course learner
+
+
+      I am very excited
+
+      I wil complete the course and learn all the skills
+    </pre>
+    <p><b> Pre Tag</b> can be used to preserve all the spaces and new lines.</p>
+  </body>
+</html>
