@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS- Notes</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Poppins&family=Roboto&display=swap");
+    </style>
   </head>
   <body>
     <h1>CSS NOTES - styled using ELEMENT selector</h1>
@@ -62,24 +71,145 @@
       <li>a:visited - to style the visited link</li>
       <li>a:active - to style the active link</li>
       <li>a:link - to style the link</li>
-      <li>p:link - to style the p tag wherever it is the first child of any parent tag</li>
+      <li>
+        p:link - to style the p tag wherever it is the first child of any parent
+        tag
+      </li>
     </ul>
     <a href="https://www.google1.com">Go to Google(Not Visited)</a>
     <a href="https://www.youtube.com">Go to Youtube(Visited)</a>
     <a href="https://www.youtube2.com">Go to Youtube Secondary(Not Visited)</a>
     <main>
-      <div>
-        I am first child div of main tag
-      </div>
-      <div>
-        I am second child div of main tag
-      </div>
+      <div>I am first child div of main tag</div>
+      <div>I am second child div of main tag</div>
     </main>
     <h2>CSS- Box Model</h2>
-    <div class="box box1">I am box. With padding = 20 px which is applied within the element and margin = 30px which is applied outside of the element. The border is applied on the element which includes the padding but not the margin. So the shaded blue area has the div along with the padding until the border. After that, margin starts.</div>
-    <div class="box box2">I am another box. Height of the box is 200px. But the total height covered by this div will be 200px + 2*margin + 2*border + 2*padding, similarly for width.
-      But if we also add box-sizzing property as bprder box, then it will keep the total width excluding the margin as 200px.
+    <div class="box box1">
+      I am box. With padding = 20 px which is applied within the element and
+      margin = 30px which is applied outside of the element. The border is
+      applied on the element which includes the padding but not the margin. So
+      the shaded blue area has the div along with the padding until the border.
+      After that, margin starts.
     </div>
-    <p>Here the concept of margin collapse is also working which states that if the margin of two elements are overlapping, then the largest of them would be applied only.</p>
+    <div class="box box2">
+      I am another box. Height of the box is 200px. But the total height covered
+      by this div will be 200px + 2*margin + 2*border + 2*padding, similarly for
+      width. But if we also add box-sizzing property as bprder box, then it will
+      keep the total width excluding the margin as 200px.
+    </div>
+    <p>
+      Here the concept of margin collapse is also working which states that if
+      the margin of two elements are overlapping, then the largest of them would
+      be applied only.
+    </p>
+    <div>
+      <h2>CSS Fonts</h2>
+      <p>This is about the fonts.</p>
+      <ul>
+        <li>
+          <span class="heading"> Font family: </span> we add a font family that
+          has a main font and some fallbacks fonts, we prefer to keep some
+          commonly used fonts so that every browser/OS/system already has these
+          or can access these.
+        </li>
+        <li>
+          <span class="heading"> Font style: </span> we can keep it italic,
+          oblique
+        </li>
+        <li>
+          <span class="heading"> Font weight: </span> we can either specify a
+          value or use from the suggestions like bold, bolder, light
+        </li>
+        <li>
+          <span class="heading"> Text decoration: </span> we can either specify
+          a value or use from the suggestions like underline, overline, line
+          through
+        </li>
+        <li>
+          <span class="heading"> Line height: </span>
+          <span class="line"
+            >controls the spacing between consective lines, Lorem ipsum dolor,
+            sit amet consectetur adipisicing elit. Labore voluptas doloribus
+            molestias culpa numquam laboriosam molestiae, ipsum perspiciatis ea
+            tempore!</span
+          >
+        </li>
+        <li>
+          <span class="heading"> Letter spacing: </span>
+          <span class="letter">
+            controls the spacing between consective letters</span
+          >
+        </li>
+        <li>
+          <span class="heading"> Text tranform: </span> Controls the case of the
+          content, capitalize, lowercase, uppercase, etc.
+        </li>
+      </ul>
+    </div>
+
+    <p>we can also use google fonts like</p>
+    <div class="extFonts">
+      Two ways of adding external Google fonts:
+      <li class="import">
+        Using imports: add import statement in the style tag, we can import
+        multiple fonts together.
+      </li>
+      <li class="link">
+        Using link: add link in the head tag from the Google fonts page
+      </li>
+    </div>
+    <div class="fontSize">
+      We can use <span class="heading">font size</span> in different units.
+      <li>px</li>
+      <li>rem</li>
+      <li>em</li>
+    </div>
+    <h3>Some text properties</h3>
+    <div class="textDecor">
+      <li>
+        text-decoration: to describe the underline or overline or line through
+        or dotted
+      </li>
+      <li>text-decoration-color: to change the color of the line</li>
+      <li>text-decoration-style: to change the style of the line</li>
+      <li>text-indent: to give an indent to the content</li>
+      <li>text-align: to give an alignment to the content</li>
+      <li>
+        text-overflow: to style the text when it overflows, like adding an
+        ellipsis at the end, or clip it at the end
+      </li>
+    </div>
+    <div class="overflow">
+      Lorem ipsum dolor sit amet consectetur ur distinctio porro,
+    </div>
+    <li>
+      <span class="heading">Word break</span>: if a word overflows then break it
+      , and start the reamaing word from the next line by
+      <code>word-break: break all;</code>
+    </li>
+    <h2>CSS Colors</h2>
+    <p>Color can be represented in three ways.</p>
+    <li>
+      Named Colors: for these colors, keywords already exist. eg, we have
+      darkred, darkorange but not dark yellow.
+    </li>
+    <li>
+      Hex color code: we can also use the hex codes for defining the colors, it
+      has a rgb equivalent also, it can also have a named color equivalent if it
+      commonly used.
+    </li>
+    <li>
+      RGB: it is defined by specifying rgb values, these range individually from
+      0-255.
+    </li>
+    <li>
+      RGBA: alpha is additional parameter that decsribes the amount of opacity,
+      varies from 0 to 1
+    </li>
+    <li>
+      HSL: stands for hue saturation and lighhtness, hue is the type of color,
+      saturation is the intensity/purity and lightness determines the lightness.
+    </li>
+    <li>HSLA: A stands for alpha, which is the opacity</li>
   </body>
 </html>
