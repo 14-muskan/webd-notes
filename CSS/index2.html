@@ -17,13 +17,34 @@
             font-weight: bold;
             color:#e00e0e;
         }
+        .box-border{
+            border:2px solid red;
+            box-sizing: border-box;
+            width:80vw;
+            height:80h;
+            margin:10px auto;
+            padding: 30px;
+        }
+        .parentBox{
+            width: 50vw;
+            border: 3px solid green;
+        }
+
+        .parentBox > div{
+            width: 70%;
+            border: 3px solid blue;
+        }
+        .parentBox > div>p{
+            width:70%;
+            border: 3px solid rgb(172, 21, 157);
+        }
     </style>
 </head>
 <body>
     
-    <p class="specificity">
-        <h2>CSS SPECIFICITY</h2>
-        Factors that decide the style of the elements
+    <div class="specificity box-border">
+    <h2>CSS SPECIFICITY</h2>
+    Factors that decide the style of the elements
     <ul>
         <li><span class="heading">Position and order of appearance:</span> If any element is styled using multiple ways, then if they are styles using the same type of selector, the style that appears in the last is applied to the element. </li>
         <li><span class="heading">Specifity:</span>In all the cases where we have different types of selectors targeting the same element, either by element, or class or id, we calculate the specificity. Higher specificity means the style will be applied.
@@ -48,8 +69,31 @@
     We keep adding these points as the selector involves any of these types. For ex: 
     if the selector is <strong>h1.red.yellow[data-x]</strong> then the specificity will be 1(h1-element) + 10(red-class) + 10(yellow-class)
     + 10(data-x - attribute) = <strong>31</strong>
-</p>
-<p class="sizes"></p>
+</div>
+<div class="sizes box-border"><h2>CSS SIZES</h2>
+    <ul>
+        <li><span class="heading">Pixels:</span> It is denoted as <strong>px</strong>. It is NOT responsive</li>
+        <li><span class="heading">Viewport:</span> It is denoted as <strong>vh</strong>(viewport height) and <strong>vw</strong>(viewport width)</li>
+        <li><span class="heading">Inherited size: </span>denoted by <strong>em</strong> and <strong>rem</strong>. They work based on the size inherited by the element from its parent.
+        <ul>
+            <li><span class="heading">Em</span> this is the multplying factor, by specifying the em value, we tell how much of the inherited value is to be given. Ex: if it is 2em and the inherited size is 16px, then the size would become 16*2 = 36px, helps in responsive design</li>
+            <li><span class="heading">Rem</span> this is similar to em but this time we take the base size of the root element which is HTML</li>
+        </ul></li>
+        <li><span class="heading">vmin</span> and <span class="heading">vmax</span> For laptops, vmax = width and for mobile phones vmax =  height. The size is interpreted as follows: <div>If we specify 100vmin, then if the user is on laptop it will be 100% of the vmin on laptop which is width.</div></li>
+        <li><span class="heading">Min-height</span> and <span class="heading">Max-height</span> Makes sure that the element occupies atleast the specified height irrespective of whether it contains that much content or not.</li>
+        <li><span class="heading">Percentage values</span> they denote how much percent of the parent size should be given to the element
+        <div class="parentBox">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid laudantium m veniam, eos reprehenderit tempore dolor, eaque, blanditiis voluptas consequuntur ducimus.
+            <div class="firstChildBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum provident mollitia aut assumenda sed soluta doloremque. Ratione praesentium dicta et voluptas modi aliquid exercitationem debitis earum sit qui? Placeat, ut qui architecto rerum is tenetur aliquam recusandae accusamus asperiores voluptatum? Doloremque?
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, qui.</p>
+            </div>
+
+        </div>
+        </li>
+    </ul>
+    A comprehensive list of all sizes and values are available on mdn docs.
+</div>
+
 
     
 </body>
