@@ -4,6 +4,9 @@
 h1 {
   color: green;
 }
+[align=left]{
+  color:rgb(6, 109, 109)
+}
 #yellow {
   color: rgb(107, 75, 7);
 }

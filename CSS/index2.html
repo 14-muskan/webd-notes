@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-2</title>
+    <style>
+        *{
+            background-color: blanchedalmond;
+        }
+        .heading{
+            color: rgb(142, 6, 6);
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        .order{
+            font-weight: bold;
+            color:#e00e0e;
+        }
+    </style>
+</head>
+<body>
+    
+    <p class="specificity">
+        <h2>CSS SPECIFICITY</h2>
+        Factors that decide the style of the elements
+    <ul>
+        <li><span class="heading">Position and order of appearance:</span> If any element is styled using multiple ways, then if they are styles using the same type of selector, the style that appears in the last is applied to the element. </li>
+        <li><span class="heading">Specifity:</span>In all the cases where we have different types of selectors targeting the same element, either by element, or class or id, we calculate the specificity. Higher specificity means the style will be applied.
+        </li>
+    </ul> 
+    <span class="heading">The order of the specificity is: </span>&nbsp;&nbsp;&nbsp; <span class="order">Inline Style > ID Selector > Class or Attribute Selector > Universal Selector(*)</span>
+    We should use a less specific selector (towards right) beacuse we can easily override general styles for any specific element.
+    <ul>
+        <li><span class="heading">Origin:</span>The styles are either given in css or given by the browser. Inacse there is no css, browser styles are applied but preferenece is given to the css given by us. Browser's stylesheet is called <strong>user agent stylesheet</strong>
+        </li>
+        <li><span class="heading">Importance:</span>If we use <code>!important</code> for any style, then it will be applied surely, it can override inline styles.
+        </li>
+    </ul>
+    
+    <h3>Specificity calculations</h3>
+    To calculate the specificity, assign points to each type of selector as follows:
+    <li>Universal selector: 0</li>
+    <li>Element selector and pseudo selector: 1</li>
+    <li>Class selector and attribute selector: 10</li>
+    <li>ID selector: 100</li>
+    <li>Inline styles: 1000</li>
+    We keep adding these points as the selector involves any of these types. For ex: 
+    if the selector is <strong>h1.red.yellow[data-x]</strong> then the specificity will be 1(h1-element) + 10(red-class) + 10(yellow-class)
+    + 10(data-x - attribute) = <strong>31</strong>
+</p>
+<p class="sizes"></p>
+
+    
+</body>
+</html>
