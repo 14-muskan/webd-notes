@@ -1,100 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS-2</title>
     <style>
-        *{
-            background-color: blanchedalmond;
-        }
-        .heading{
-            color: rgb(142, 6, 6);
-            font-weight: bolder;
-            text-decoration: underline;
-        }
-        .order{
-            font-weight: bold;
-            color:#e00e0e;
-        }
-        .box-border{
-            border:2px solid red;
-            box-sizing: border-box;
-            width:80vw;
-            height:80h;
-            margin:10px auto;
-            padding: 30px;
-        }
-        .parentBox{
-            width: 50vw;
-            border: 3px solid green;
-        }
+      * {
+        background-color: blanchedalmond;
+      }
+      .heading {
+        color: rgb(142, 6, 6);
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+      .order {
+        font-weight: bold;
+        color: #e00e0e;
+      }
+      .box-border {
+        border: 2px solid red;
+        box-sizing: border-box;
+        width: 80vw;
+        height: 80h;
+        margin: 10px auto;
+        padding: 30px;
+      }
+      .parentBox {
+        width: 50vw;
+        border: 3px solid green;
+      }
 
-        .parentBox > div{
-            width: 70%;
-            border: 3px solid blue;
-        }
-        .parentBox > div>p{
-            width:70%;
-            border: 3px solid rgb(172, 21, 157);
-        }
+      .parentBox > div {
+        width: 70%;
+        border: 3px solid blue;
+      }
+      .parentBox > div > p {
+        width: 70%;
+        border: 3px solid rgb(172, 21, 157);
+      }
+      .shadows{
+        box-shadow: 5px 5px 10px 5px #610303;
+        text-shadow: 2px 4px 4px rgb(221, 18, 18);
+      }
     </style>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="specificity box-border">
-    <h2>CSS SPECIFICITY</h2>
-    Factors that decide the style of the elements
-    <ul>
-        <li><span class="heading">Position and order of appearance:</span> If any element is styled using multiple ways, then if they are styles using the same type of selector, the style that appears in the last is applied to the element. </li>
-        <li><span class="heading">Specifity:</span>In all the cases where we have different types of selectors targeting the same element, either by element, or class or id, we calculate the specificity. Higher specificity means the style will be applied.
+      <h2>CSS SPECIFICITY</h2>
+      Factors that decide the style of the elements
+      <ul>
+        <li>
+          <span class="heading">Position and order of appearance:</span> If any
+          element is styled using multiple ways, then if they are styles using
+          the same type of selector, the style that appears in the last is
+          applied to the element.
         </li>
-    </ul> 
-    <span class="heading">The order of the specificity is: </span>&nbsp;&nbsp;&nbsp; <span class="order">Inline Style > ID Selector > Class or Attribute Selector > Universal Selector(*)</span>
-    We should use a less specific selector (towards right) beacuse we can easily override general styles for any specific element.
-    <ul>
-        <li><span class="heading">Origin:</span>The styles are either given in css or given by the browser. Inacse there is no css, browser styles are applied but preferenece is given to the css given by us. Browser's stylesheet is called <strong>user agent stylesheet</strong>
+        <li>
+          <span class="heading">Specifity:</span>In all the cases where we have
+          different types of selectors targeting the same element, either by
+          element, or class or id, we calculate the specificity. Higher
+          specificity means the style will be applied.
         </li>
-        <li><span class="heading">Importance:</span>If we use <code>!important</code> for any style, then it will be applied surely, it can override inline styles.
+      </ul>
+      <span class="heading">The order of the specificity is: </span
+      >&nbsp;&nbsp;&nbsp;
+      <span class="order"
+        >Inline Style > ID Selector > Class or Attribute Selector > Universal
+        Selector(*)</span
+      >
+      We should use a less specific selector (towards right) beacuse we can
+      easily override general styles for any specific element.
+      <ul>
+        <li>
+          <span class="heading">Origin:</span>The styles are either given in css
+          or given by the browser. Inacse there is no css, browser styles are
+          applied but preferenece is given to the css given by us. Browser's
+          stylesheet is called <strong>user agent stylesheet</strong>
         </li>
-    </ul>
-    
-    <h3>Specificity calculations</h3>
-    To calculate the specificity, assign points to each type of selector as follows:
-    <li>Universal selector: 0</li>
-    <li>Element selector and pseudo selector: 1</li>
-    <li>Class selector and attribute selector: 10</li>
-    <li>ID selector: 100</li>
-    <li>Inline styles: 1000</li>
-    We keep adding these points as the selector involves any of these types. For ex: 
-    if the selector is <strong>h1.red.yellow[data-x]</strong> then the specificity will be 1(h1-element) + 10(red-class) + 10(yellow-class)
-    + 10(data-x - attribute) = <strong>31</strong>
-</div>
-<div class="sizes box-border"><h2>CSS SIZES</h2>
-    <ul>
-        <li><span class="heading">Pixels:</span> It is denoted as <strong>px</strong>. It is NOT responsive</li>
-        <li><span class="heading">Viewport:</span> It is denoted as <strong>vh</strong>(viewport height) and <strong>vw</strong>(viewport width)</li>
-        <li><span class="heading">Inherited size: </span>denoted by <strong>em</strong> and <strong>rem</strong>. They work based on the size inherited by the element from its parent.
-        <ul>
-            <li><span class="heading">Em</span> this is the multplying factor, by specifying the em value, we tell how much of the inherited value is to be given. Ex: if it is 2em and the inherited size is 16px, then the size would become 16*2 = 36px, helps in responsive design</li>
-            <li><span class="heading">Rem</span> this is similar to em but this time we take the base size of the root element which is HTML</li>
-        </ul></li>
-        <li><span class="heading">vmin</span> and <span class="heading">vmax</span> For laptops, vmax = width and for mobile phones vmax =  height. The size is interpreted as follows: <div>If we specify 100vmin, then if the user is on laptop it will be 100% of the vmin on laptop which is width.</div></li>
-        <li><span class="heading">Min-height</span> and <span class="heading">Max-height</span> Makes sure that the element occupies atleast the specified height irrespective of whether it contains that much content or not.</li>
-        <li><span class="heading">Percentage values</span> they denote how much percent of the parent size should be given to the element
-        <div class="parentBox">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid laudantium m veniam, eos reprehenderit tempore dolor, eaque, blanditiis voluptas consequuntur ducimus.
-            <div class="firstChildBox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum provident mollitia aut assumenda sed soluta doloremque. Ratione praesentium dicta et voluptas modi aliquid exercitationem debitis earum sit qui? Placeat, ut qui architecto rerum is tenetur aliquam recusandae accusamus asperiores voluptatum? Doloremque?
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, qui.</p>
+        <li>
+          <span class="heading">Importance:</span>If we use
+          <code>!important</code> for any style, then it will be applied surely,
+          it can override inline styles.
+        </li>
+      </ul>
+
+      <h3>Specificity calculations</h3>
+      To calculate the specificity, assign points to each type of selector as
+      follows:
+      <li>Universal selector: 0</li>
+      <li>Element selector and pseudo selector: 1</li>
+      <li>Class selector and attribute selector: 10</li>
+      <li>ID selector: 100</li>
+      <li>Inline styles: 1000</li>
+      We keep adding these points as the selector involves any of these types.
+      For ex: if the selector is <strong>h1.red.yellow[data-x]</strong> then the
+      specificity will be 1(h1-element) + 10(red-class) + 10(yellow-class) +
+      10(data-x - attribute) = <strong>31</strong>
+    </div>
+    <div class="sizes box-border">
+      <h2>CSS SIZES</h2>
+      <ul>
+        <li>
+          <span class="heading">Pixels:</span> It is denoted as
+          <strong>px</strong>. It is NOT responsive
+        </li>
+        <li>
+          <span class="heading">Viewport:</span> It is denoted as
+          <strong>vh</strong>(viewport height) and <strong>vw</strong>(viewport
+          width)
+        </li>
+        <li>
+          <span class="heading">Inherited size: </span>denoted by
+          <strong>em</strong> and <strong>rem</strong>. They work based on the
+          size inherited by the element from its parent.
+          <ul>
+            <li>
+              <span class="heading">Em</span> this is the multplying factor, by
+              specifying the em value, we tell how much of the inherited value
+              is to be given. Ex: if it is 2em and the inherited size is 16px,
+              then the size would become 16*2 = 36px, helps in responsive design
+            </li>
+            <li>
+              <span class="heading">Rem</span> this is similar to em but this
+              time we take the base size of the root element which is HTML
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="heading">vmin</span> and
+          <span class="heading">vmax</span> For laptops, vmax = width and for
+          mobile phones vmax = height. The size is interpreted as follows:
+          <div>
+            If we specify 100vmin, then if the user is on laptop it will be 100%
+            of the vmin on laptop which is width.
+          </div>
+        </li>
+        <li>
+          <span class="heading">Min-height</span> and
+          <span class="heading">Max-height</span> Makes sure that the element
+          occupies atleast the specified height irrespective of whether it
+          contains that much content or not.
+        </li>
+        <li>
+          <span class="heading">Percentage values</span> they denote how much
+          percent of the parent size should be given to the element
+          <div class="parentBox">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
+            laudantium m veniam, eos reprehenderit tempore dolor, eaque,
+            blanditiis voluptas consequuntur ducimus.
+            <div class="firstChildBox">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+              provident mollitia aut assumenda sed soluta doloremque. Ratione
+              praesentium dicta et voluptas modi aliquid exercitationem debitis
+              earum sit qui? Placeat, ut qui architecto rerum is tenetur aliquam
+              recusandae accusamus asperiores voluptatum? Doloremque?
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis, qui.
+              </p>
             </div>
-
-        </div>
+          </div>
         </li>
-    </ul>
-    A comprehensive list of all sizes and values are available on mdn docs.
-</div>
+      </ul>
+      A comprehensive list of all sizes and values are available on mdn docs.
+    </div>
+    <div class="displays box-border">
+      <h2>CSS DISPLAY</h2>
+      <ul>
+        <li><span class="heading">Inline</span></li>
+        <li><span class="heading">Block</span></li>
+        <li><span class="heading">Inline-Block</span></li>
+        <li><span class="heading">Flex</span></li>
+        <li><span class="heading">Grid</span></li>
+        <li><span class="heading">Inline-Flex</span></li>
+      </ul>
+    </div>
+    <div class="shadows box-border">
+      <h3>CSS SHADOWS AND OUTLINES</h3>
+      <li>
+        <span class="heading">Shadow</span> : The syntax for box shadow is
+        <div>
+          <code>box-shadow: h-offset v-offset blur spread color inset</code>
+        </div>
+        <ul>
+          <li><code>h-offset</code> and <code>v-offset</code> : determines the shadow's horizontal and vertical position</li>
+          <li><code>blur</code> : the larger the value, the blurrier the shadow</li>
+          <li><code>spread</code> : expands or shrinks the shadow size</li>
+          <li><code>color</code> : determines the color of the shadow</li>
+          <li><code>inset</code> : makes shadow inner</li>
+        </ul>
+        we can have shadows for both box and text with similar syntax, need not remeber the syntax, can always use inspect element on the developer's tools
+        <li>
+          <span class="heading">Outline</span> : different from border as it is not a part of the box model. It has various properties like offset that do NOT affect the box model of an element, border can vary on different sides but outline has uniform width on all sides.
+        </li>
 
 
-    
-</body>
+      </li>
+    </div>
+  </body>
 </html>
