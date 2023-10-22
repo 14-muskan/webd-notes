@@ -42,6 +42,19 @@
         box-shadow: 5px 5px 10px 5px #610303;
         text-shadow: 2px 4px 4px rgb(221, 18, 18);
       }
+      .stylesList li{
+        list-style: devanagari;
+      }
+      .rawList li{
+        background-color: yellow;
+      }
+      .navbarList li{
+        list-style: none;
+        padding: 30px;
+      }
+      .navbarList{
+        display: flex; 
+      }
     </style>
   </head>
   <body>
@@ -193,9 +206,40 @@
         <li>
           <span class="heading">Outline</span> : different from border as it is not a part of the box model. It has various properties like offset that do NOT affect the box model of an element, border can vary on different sides but outline has uniform width on all sides.
         </li>
-
-
       </li>
+    </div>
+    <div class="lists box-border">
+      <h3>CSS LISTS</h3>
+      <ul class="rawList">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      Generally the marker of the list item is separate from the list, to combine them we use <code>list-style-position: inside;</code>
+      We can change the marker of the list by <code>list-style</code>
+      <ul class="stylesList">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      We can also change the markers to be an emoji or a specific image by giving the url
+      Consider we wish to display this list as a navbar, we apply css styling
+      <ul class="navbarList">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="overflow box-border">
+      <h3>CSS OVERFLOW PROPERTY</h3>
+      When the content overflows the box model, we can handle the overflow.
+      <code>overflow: scroll/auto/hidden/clip;</code>
+      <li>scroll means give the scroll bars always</li>
+      <li>auto means give the scroll bars if needed</li>
+      <li>hidden means the overflow is hidden, if it is used along with <code>text-overflow:ellipsis;</code> the overflow is denoted as ... </li>
+      <li>clip means we cannot scroll programmatically</li>
+      we can also target the overflow in both dirctions as <code>overflow-x</code> and <code>overflow-y</code>. The shorthand is 
+      <code>overflow: auto hidden;</code> (first for x, then for y)
     </div>
   </body>
 </html>
