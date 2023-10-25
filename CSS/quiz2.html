@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .card {
+        border: 2px solid rgb(201, 245, 208);
+        height: 80vh;
+        width: 40vw;
+        border-radius: 5%;
+        background-color: rgba(233, 244, 232, 0.91);
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image img {
+        width: 35vw;
+        height: 40vh;
+        position: relative;
+        top: 5px;
+        border-radius: 5%;
+      }
+      .image img:hover {
+        height: 41vh;
+        width: 36vw;
+        border: 2px solid green;
+      }
+      .tags {
+        margin: 15px;
+      }
+      .tag {
+        margin: 5px;
+        padding: 2px;
+        border: 2px solid rgb(176, 224, 192);
+        border-radius: 25%;
+        background-color: rgb(176, 233, 182);
+        font-family: "Josefin Sans", sans-serif;
+      }
+      .tag:hover {
+        background-color: rgb(12, 78, 37);
+        cursor: pointer;
+        color: white;
+      }
+      .heading {
+        margin: 15px;
+        font-family: "Playpen Sans", cursive;
+        font-size: x-large;
+        font-weight: bold;
+        color: rgb(9, 144, 9);
+      }
+      .text {
+        margin: 15px;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        border: 2px solid rgb(152, 224, 150);
+        border-radius: 15%;
+        padding: 5px;
+        background-color: rgb(163, 239, 183);
+        color: green;
+      }
+      .btn:hover {
+        background-color: rgb(5, 64, 40);
+        cursor: pointer;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="image">
+        <img src="img.jpg" alt="Bird in lake" />
+      </div>
+      <div class="tags">
+        <span class="tag">Nature</span>
+        <span class="tag">Lake</span>
+        <span class="tag">Bird</span>
+      </div>
+      <div class="container">
+        <div class="heading">Hello ABC!!</div>
+        <div class="text">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
+          obcaecati quaerat ea voluptas accusamus asperiores consequatur sit at
+          quas et.
+        </div>
+        <div class="button"><span class="btn">Read More</span></div>
+      </div>
+    </div>
+  </body>
+</html>
