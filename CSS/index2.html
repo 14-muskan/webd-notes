@@ -79,6 +79,35 @@
       .box4 {
         background-color: chocolate;
       }
+      :root {
+        --color: blue;
+        --seccolor: rgb(134, 134, 223);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box-border {
+        border: 2px solid rgb(155, 9, 9);
+        box-sizing: border-box;
+        width: 80vw;
+        height: 80h;
+        margin: 10px auto;
+        padding: 30px;
+      }
+      .navbar {
+        background-color: var(--color);
+      }
+      ul {
+        display: flex;
+      }
+      ul li {
+        list-style: none;
+        padding: 30px;
+      }
+      .container {
+        background-color: var(--seccolor);
+      }
     </style>
   </head>
   <body>
@@ -315,7 +344,36 @@
         <span class="heading">Fixed</span> It does not move even if we scroll the page, stays fixed on the page on the specified position.
       </li>
       <li><span class="heading">Sticky</span> It is static by default in behaviour, but if we scroll past it, it remains sticked to the top (always)</li>
-
+      <div class="variable box-border">
+        <h2>CSS VARIABLES</h2>
+        <div class="navbar">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+  
+        <div class="container">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vero
+          voluptatem laborum tempore consectetur, animi cum quos assumenda maxime
+          praesentium eius officiis veniam expedita esse commodi molestias atque
+          quod perferendis debitis alias. Laborum facere voluptates veniam nam
+          voluptatibus dignissimos iste quas ab, sunt numquam asperiores?
+        </div>
+  
+        We can make global variables in <code>:root{}</code> . We can change the
+        variable at one place and its effect will be seen everywhere. This can be
+        used in deciding the color themes, We can also use a fallback color like
+        <div>
+          <code> ul li{ background-color: var(--color, blue); } </code>
+        </div>
+        This will first look for --color variable and if not found use blue.
+        <strong
+          >CSS Variables can store multitude of properties like margin, height,
+          padding, opacity etc.</strong
+        >
+      </div>
 
     </div>
   </body>
