@@ -6,7 +6,7 @@
     <title>CSS - 3</title>
     <style>
       body{
-        background-color: aqua;
+        background-color: rgb(189, 247, 247);
       }
       .box{
         display: flex;
@@ -17,6 +17,18 @@
         padding: 30px;
         height: 50px;
         width:50px;
+      }
+      .heading {
+        color: rgb(14, 115, 216);
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+      .box-border {
+        border: 2px solid rgb(4, 13, 141);
+        width: 80vw;
+        height: 80h;
+        margin: 10px auto;
+        padding: 30px;
       }
       
       @media only screen and (max-width:500px) {
@@ -29,16 +41,29 @@
         .boxes{
           background-color: brown;
         }
+        
       }
+      .one{
+        float :right;
+      }
+      
     </style>
   </head>
   <body>
-    <h3>CSS MEDIA QUERY</h3>
-    <div class="box">
+    <div class="box box-border">
+      <h3>CSS MEDIA QUERY</h3>
       <div class="boxes"></div>
       <div class="boxes"></div>
       <div class="boxes"></div>
       <div class="boxes"></div>
+    </div>
+    <div class="box-border">
+      <h3>CSS FLOAT AND CLEAR</h3>
+      <img class="one" src="https://images.pexels.com/photos/18431185/pexels-photo-18431185/free-photo-of-ornamented-gate-in-old-town.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Old Gate" height="250">
+      <p class="float"> <span class="heading">Float</span> <strong>It means that the object will float in the direction specified for it. And will allow objects on the opposite direction (kind of behave like an inline element for the particular case).
+      </strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus vel itaque iste similique saepe deleniti, quisquam reprehenderit, autem fugit ea fuga eligendi a? Maxime quo libero rerum! Doloremque nostrum pariatur fugit placeat illo ipsam aliquid eius sed, libero fugiat, amet voluptate laudantium rem? Veritatis vel earum numquam facilis officia fugiat doloremque amet nobis non facere cupiditate commodi deserunt omnis sequi, dicta sint mollitia deleniti. Explicabo temporibus libero vitae facere, voluptate a commodi eligendi dicta, nihil perspiciatis voluptatem. Quisquam facere voluptatem dolorem illum reprehenderit libero quidem nulla! Officiis ab ducimus eaque consequatur tempora, voluptatum quaerat cupiditate labore exercitationem delectus sunt totam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus doloremque est, accusantium recusandae repellat numquam labore excepturi reiciendis earum quos dicta repellendus laudantium, fugiat id voluptatem temporibus rerum corrupti eius commodi cumque. Recusandae exercitationem quisquam, tenetur dolorum aperiam, sit dolores quas quaerat voluptas labore temporibus distinctio fuga provident quod blanditiis. <strong>Here the image is floating on the right</strong></p>
+      
+      <p class="clear"><span class="heading">Clear</span> <strong>It means that it will not allow objects in the direction specified and completely take up the space</strong> </p>
     </div>
   </body>
 </html>
