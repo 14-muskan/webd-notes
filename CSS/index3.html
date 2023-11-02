@@ -46,6 +46,44 @@
       .one{
         float :right;
       }
+      .inner1:first-child{
+        background-color: rgb(119, 119, 210);
+      }
+
+      .inner2::first-line{
+        color:rgb(4, 4, 140);
+        font-weight: bolder;
+      }
+      .inner3::first-letter{
+        color:purple;
+        font-size: 30px;
+      }
+      .outer *{
+        border: 2px solid blue;
+      }
+      [data-color="primary"]{
+        padding: 20px;
+      }
+      .card:nth-child(even){
+        background-color: rgb(215, 202, 228);
+      }
+      .cards::before{
+        content: "This is dynamically inserted text using CSS '::before' selector which will add this line before the main content of the cards. It is a pseudo element not selector. This can be styled as well";
+        color:rgb(138, 4, 71);
+      }
+      .cards::after{
+        content: "This is dynamically inserted text using CSS '::after' selector which will add this line after the main content of the cards. It is a pseudo element not selector. This can be styled as well";
+        color:rgb(62, 120, 4)
+      }
+      ::selection{
+        background-color: cadetblue;
+        color:blue
+      }
+      input::placeholder{
+        color:blue
+      }
+
+
       
     </style>
   </head>
@@ -65,5 +103,23 @@
       
       <p class="clear"><span class="heading">Clear</span> <strong>It means that it will not allow objects in the direction specified and completely take up the space</strong> </p>
     </div>
+
+    <div class="box-border">
+      <h3>More on CSS Selectors</h3>
+      <div class="outer">
+        <div class="inner1"><strong>
+          Here <code>.inner:first-child{background-color:blue}</code> is applied which means that whenever inner is the first child of its parent this style will be applied.
+        </strong></div>
+        <div data-color="primary" class="inner2"><strong>Here the first line is styled using <code>inner::first-line{}</code> . </strong></div>
+        <div class="inner3">Here the first letter is styled using <code>inner::first-letter</code></div>
+      </div>
+      <div class="cards">
+        <div class="card">I am Box1</div>
+        <div class="card">I am Box2</div>
+        <div class="card">I am Box3</div>
+      </div>
+      <input type="text" placeholder="Type your name here">
+    </div>
+   
   </body>
 </html>
