@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(111, 222, 137);
+      }
+      .container {
+        border: 2px solid rgb(4, 111, 56);
+        display: flex;
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: row-reverse; */
+        margin: 10px;
+      }
+
+      .item {
+        height: 200px;
+        width: 200px;
+        background-color: rgb(4, 78, 9);
+        border: 2px solid black;
+        margin: 5px;
+        color: whitesmoke;
+        font-size: 30px;
+      }
+      .flex {
+        margin: 10px;
+        padding: 10px;
+        border: 2px solid rgb(4, 111, 56);
+      }
+      code {
+        font-weight: bolder;
+        border: 1px solid blanchedalmond;
+        background-color: rgb(172, 233, 172);
+      }
+      h3{
+        padding:10px;
+        margin:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+    <div class="flex">
+        <h3>Container Properties</h3>
+      <li>
+        The axis in which the items are laid
+        <code>flex-direction: column-reverse</code> (here they will in the
+        column direction in reverse order)is the <strong>main axis</strong> and
+        the perpendicular axis is the <strong>cross axis</strong>
+      </li>
+      <li>
+        <code>justify-content:center;</code> centers the items along the main
+        axis and <code>align-items:center;</code> centers along the cross axis.
+      </li>
+      <li>
+        When the cross axis starts, it is called <strong>cross-start</strong>,
+        where it ends is called <strong>cross-end</strong>
+      </li>
+      <li>
+        <code>flex-wrap: wrap;</code> will wrap the content in the
+        flex-direction
+      </li>
+      <li>
+        <code>align-content: center;</code> used when multiple lines are
+        present. But there is no property like <code>justify-items</code>
+      </li>
+      <li>
+        using <code>flex-flow: row wrap;</code> we can simultaneously set the
+        flex-direction and flex-wrap
+      </li>
+      <li><code>gap: 10px;</code> will make a gap of defined value between all the items.</li>
+      <li><code>row-gap: 2px;</code> and <code>column-gap: 2px;</code> will set the gap property individually. We also have a shorthand for this <code>gap: 2px 2px;</code> first for the row then column</li>
+
+      <h3>Item Properties</h3>
+      <li>order is applied to each of the item, the element with least order will come first <code>.order-1{order:1;}</code> and <code>.order-2{order:2;}</code> Here first object will come first. Default order is 0</li>
+      <li><code>flex-grow:2;</code> this will take up twice as spcae by other elements. Used on individual item</li>
+      <li><code>flex-shrink:2;</code> will decide the ability of the item to shrink if needed, it will shrink to half the size </li>
+      <li><code>align-self: flex-start;</code> this will decide the configuration of the particular element.</li>
+    </div>
+  </body>
+</html>
