@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Layout</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .navbar{
+            background-color: rgb(3, 38, 68);
+            height: 15vh;
+            position: sticky;
+            top:0px;
+            
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+           
+        }
+        li{
+            margin:10px;
+            padding:20px;
+            color:white;
+            font-size: 20px;
+        }
+        .container{
+            height:80vh;
+            display: flex;
+            background-color: rgb(109, 124, 237);
+            justify-content: center;
+            
+        }
+        .container-box{
+            width: 45vw;
+            margin:10px;
+            padding: 30px;
+            border: 2px solid white;
+            border-radius: 10%;
+            color: white;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left-box{
+            background-color: rgb(7, 4, 64);
+            
+        }
+        .right-box{
+            background-color: rgb(7, 4, 64);
+            
+        }
+        .logo{
+            position: fixed;
+            right:10px;
+            bottom: 20px;
+        }
+        .content-box{
+            border-radius: 10%;
+            height: 15vh;
+            margin: 20px;
+            padding: 50px;
+            background-color: blueviolet;
+        }
+        .footer{
+            background-color: rgb(205, 255, 213);
+            height: 20vh;
+            font-size: 2rem;
+            padding: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact us</li>
+            <li>Services</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="left-box container-box"> This is the left div</div>
+        <div class="right-box container-box">This is the right div</div>
+        <img class="logo" src="logo.png" alt="" height="50px">
+    </div>
+
+    
+
+    <div class="content-box">
+        <h2>Welcome to the Sigma Web Development Course!!</h2>
+    </div>
+
+    <div class="footer">
+        This is the footer
+
+    </div>
+    
+</body>
+</html>
