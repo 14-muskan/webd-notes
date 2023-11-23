@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS-4</title>
+    <title>CSS-Flex And Grid</title>
     <style>
       * {
         margin: 0;
@@ -29,7 +29,7 @@
         color: whitesmoke;
         font-size: 30px;
       }
-      .flex {
+      .box {
         margin: 10px;
         padding: 10px;
         border: 2px solid rgb(4, 111, 56);
@@ -43,6 +43,27 @@
         padding:10px;
         margin:10px;
       }
+      .grid{
+        background-color: beige;
+      }
+      .gridbox{
+        display: grid;
+        grid-template-columns: [pehla] 120px [doosra]100px [teesra];
+        grid-template-rows: 100px 100px 100px;
+      }
+      .griditem{
+          border: 1px solid black;
+          height: 50px;
+          width: 50px;
+      }
+      .item4{
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
+      .item1{
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }
     </style>
   </head>
   <body>
@@ -53,7 +74,8 @@
       <div class="item">4</div>
       <div class="item">5</div>
     </div>
-    <div class="flex">
+    <div class="box">
+      <h2>FLEX BOX</h2>
         <h3>Container Properties</h3>
       <li>
         The axis in which the items are laid
@@ -89,6 +111,37 @@
       <li><code>flex-grow:2;</code> this will take up twice as spcae by other elements. Used on individual item</li>
       <li><code>flex-shrink:2;</code> will decide the ability of the item to shrink if needed, it will shrink to half the size </li>
       <li><code>align-self: flex-start;</code> this will decide the configuration of the particular element.</li>
+    </div>
+
+    <div class="box">
+      <h2>GRID</h2>
+      Similar to flexbox we have different properties for the containers and the items.
+
+      <div class="gridbox">
+        <div class="griditem item1">Item 1</div>
+        <div class="griditem">Item 2</div>
+        <div class="griditem">Item 3</div>
+        <div class="griditem item4">Item 4</div>
+        <div class="griditem">Item 5</div>
+        <div class="griditem">Item 6</div>
+      </div>
+
+      <li>We define the number of rows and columns as <code>.gridbox{
+        display: grid;
+        grid-template-columns: 120px 100px;
+        grid-template-rows: 100px 100px 100px;
+      }</code></li>
+
+      <li>The ordering and placement of the objects are done automatically, but if we wish to specify , then we can do so as <code>.item1{
+        grid-row: 1/2;
+        grid-column: 1/2;
+      }</code> . This signifies that the item would begin from line 1 to line 2 of the rows of the grid, similarly for columns. This is a shorthand for <code>grid-row-start: 1; grid-row-end: 2;</code></li>
+
+      <li>If we wish to overlap any items then we can specify the same <strong>grid-row</strong> and same <strong>grid-column</strong></li>
+
+      <li>We can specify our own names for the grid lines, like <code>grid-template-columns: [pehla] 120px [doosra]100px [teesra];</code></li>
+      
+
     </div>
   </body>
 </html>
